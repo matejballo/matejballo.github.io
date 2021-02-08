@@ -51,14 +51,15 @@ section {
 
 .frame {
     width: auto;
+    max-width: 100%;
     display: inline-block;
     position: absolute;
     flex-wrap: wrap;
     top: 50%;
     left: 50%;
-    padding: 2em 6em 2em 6em;
     transform: translate(-50%, -50%);
     border: 3px solid #fff;
+    padding: 2em 5em 2em 5em;
     text-align: center;
 }
 
@@ -68,6 +69,7 @@ h1 {
     font-size: 5rem;
     text-transform: uppercase;
     letter-spacing: 2px;
+    white-space: nowrap;
     /*
     border: 3px solid #fff;
     position: absolute;
@@ -76,3 +78,33 @@ h1 {
     transform: translate(-50%, -50%);
     padding: 5rem 10rem;*/
 }
+
+@media only screen and (max-width: 500px) and (min-width:305px) {
+    .frame {
+        padding: 0.5em;
+    }
+    h1 {
+        white-space: nowrap;
+        font-size: 4rem;
+    }
+    #linkedin-icon, #github-icon, #website-icon {
+        height: 4rem;
+        width: auto;
+        margin: 0.5em;
+    }
+  }
+
+  @media only screen and (max-width: 305px) {
+    .frame {
+        padding: 0.5em;
+    }
+    h1 {
+        white-space: nowrap;
+        font-size: 2rem;
+    }
+    #linkedin-icon, #github-icon, #website-icon {
+        height: 2rem;
+        width: auto;
+        margin: 0.5em;
+    }
+  }
